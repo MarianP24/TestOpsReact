@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #343a40;  /* bg-dark */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    background-color: #0056b3;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu {
+    background-color: #343a40;  /* bg-dark */
+}
+
+.navbar .navbar-nav .nav-item .dropdown-item:hover {
+    background-color: #0056b3;
+}
