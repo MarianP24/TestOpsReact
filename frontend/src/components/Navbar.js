@@ -1,37 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';  // Use Link for navigation in React
-import './Navbar.css';  // Import CSS file for styles
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => setIsOpen(!isOpen);
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">ICT Manager</Link>  {/* React Link */}
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/index">Home</Link>  {/* React Link */}
-                        </li>
-                        <li className="nav-item dropdown">
-                            <button className="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                Options
-                            </button>
-                            <ul className="dropdown-menu bg-dark">
-                                <li><Link className="dropdown-item" to="/fixtures/listEndpointsController">FixtureController</Link></li>  {/* React Link */}
-                                <li><Link className="dropdown-item" to="/machines/listEndpointsMachine">MachineController</Link></li>  {/* React Link */}
-                            </ul>
-                        </li>
+        <nav className="bg-gray-800 p-4">
+            <ul className="flex space-x-4">
+                <li>
+                    <Link to="/" className="text-white hover:text-gray-300">Home</Link>
+                </li>
+                <li className="relative" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                    <Link to="#" className="text-white hover:text-gray-300">Options</Link>
+                    <ul className={`absolute bg-white text-gray-800 pt-2 ${isOpen ? 'block' : 'hidden'}`}>
+                        <li className="hover:bg-gray-200"><Link to="/fixture" className="block px-4 py-2">Fixture</Link></li>
+                        <li className="hover:bg-gray-200"><Link to="/machine" className="block px-4 py-2">Machine</Link></li>
                     </ul>
-                </div>
-            </div>
+                </li>
+            </ul>
         </nav>
     );
-}
+};
 
 export default Navbar;

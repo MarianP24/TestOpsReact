@@ -1,15 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';  // Importă componenta Navbar
-import Index from './pages/Index';  // Exemplu de pagină
+import Navbar from './components/Navbar';
+import Index from './pages/Index';
+import './index.css';
+import Fixture from './pages/Fixture';
+
 
 const App = () => {
     return (
         <Router>
-            <Navbar />  {/* Afișează navbar-ul pe toate paginile */}
+            <Navbar />  {}
             <Routes>
-                <Route path="/" element={<Index />} />  {/* Ruta pentru pagina principală */}
-                <Route path="/index" element={<Index />} />  {/* Ruta pentru /index */}
+                <Route path="/" element={<Fixture />} />
+                <Route path="/index" element={<Index />} />
             </Routes>
         </Router>
     );
