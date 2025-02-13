@@ -1,0 +1,86 @@
+.hexagon-container {
+    position: fixed;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    overflow: visible;
+}
+
+.hexagon-wrap {
+    position: relative;
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 1));
+}
+
+.hexagon {
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    z-index: 1;
+}
+
+.hexagon:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.hex1 {
+    top: 45px;
+    left: 160px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.hex2 {
+    top: 45px;
+    left: 327px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.hex3 {
+    top: 192px;
+    left: 75px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.hex4 {
+    top: 192px;
+    left: 242px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.hex5 {
+    top: 192px;
+    left: 409px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.hex6 {
+    top: 340px;
+    left: 160px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.hex7 {
+    top: 340px;
+    left: 327px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}

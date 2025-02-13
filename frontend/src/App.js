@@ -4,12 +4,13 @@ import Navbar from './components/Navbar';
 import Index from './pages/Index';
 import './index.css';
 import Fixture from './pages/Fixture';
+import './components/Background.css';
 
 
 const App = () => {
     return (
         <Router>
-            <Navbar />  {}
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Fixture />} />
                 <Route path="/index" element={<Index />} />
